@@ -1,1 +1,33 @@
-<p>work-orders works!</p>
+<div class="container">
+    <div class="top-critical-density">
+        <p class="title">TOP CRITICAL DENSITY</p>
+        <p class="density-name">{{ topCriticalDensity.areaName }}</p>
+        <p class="description">{{ topCriticalDensity.description }}</p>
+    </div>
+
+    <app-table>
+        <div class="table">
+            <div class="table-header">
+                <div class="table-header-title">RANK</div>
+                <div class="table-header-title">GRIEVANCE ID</div>
+                <div class="table-header-title">GRIEVANCE TYPE</div>
+                <div class="table-header-title">PRIORITY SCORE</div>
+                <div class="table-header-title">ASSIGNED TEAM</div>
+                <div class="table-header-title">CONTACT</div>
+            </div>
+
+            <div class="table-data">
+                @for (record of grievanceRecords; track record.grievanceId) {
+                    <div class="table-record">
+                        <div class="table-record-data">{{ record.rank }}</div>
+                        <div class="table-record-data">{{ record.grievanceId }}</div>
+                        <div class="table-record-data">{{ record.grievanceType }}</div>
+                        <div class="table-record-data">{{ record.priorityScore }}</div>
+                        <div class="table-record-data">{{ record.assignedTeam }}</div>
+                        <div class="table-record-data">{{ record.assignedTeamContact }}</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </app-table>
+</div>
