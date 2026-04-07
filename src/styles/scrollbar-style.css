@@ -1,12 +1,12 @@
 * {
     scroll-behavior: smooth;
 
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: var(--color-border) var(--color-near-white);
 }
 
 *::-webkit-scrollbar {
-    width: 5px;
+    width: 0px;
 }
 
 *::-webkit-scrollbar-track {

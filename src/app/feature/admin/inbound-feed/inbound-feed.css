@@ -3,6 +3,7 @@
     grid-template-columns: 1fr;
     gap: calc(var(--gap) * 2);
 }
+
 .title {
     font: var(--font-caption);
     font-size: calc(var(--font-size) * 1.5);
@@ -12,6 +13,7 @@
 .split-container {
     display: grid;
     grid-template-columns: 5fr 2fr;
+    gap: calc(var(--gap) * 2);
 }
 
 .table-data {
@@ -32,4 +34,21 @@
     ));
 
     overflow-y: auto;
+}
+
+.ingest-data {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) * 2);
+}
+
+.no-data-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font: var(--font-pill);
+    color: var(--color-caption);
+    font-size: calc(var(--font-size) * 2);
+    margin: auto;
 }

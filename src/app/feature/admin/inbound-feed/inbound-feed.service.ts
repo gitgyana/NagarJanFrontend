@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {InboundFeedInterface} from './inbound-feed.model';
+import {ProgressCardInterface} from '../../../shared/component/progress-card/progress-card.model';
 
 @Injectable({
     providedIn: 'root',
@@ -13,7 +14,18 @@ export class InboundFeedService {
         { dataId: '5', source: 'email', grievanceId: 'GR-82914', timestamp: '14:10:59', rawContent: 'Urgent: Traffic signal at Westend is stuck on red for 10 mins...', deduplication: 'HIGH CONFLICT', category: 'Traffic Signal', action: 'Force Manual' }
     ];
 
+    private ingestData: ProgressCardInterface[] = [
+        { label: 'Transcription', labelValue: 82, description: "Audio record: Voicemail_72.mp3" },
+        { label: 'NLP Classification', labelValue: 45, description: "Ref: Email_Ingest_4412" },
+        { label: 'Deduplication', labelValue: 15, description: "Ref: App_Post_9918" },
+    ];
+
     getInboundFeed(): InboundFeedInterface[] {
         return this.inboundData;
     }
+
+    getIngestData(id: string): ProgressCardInterface[] {
+        return this.ingestData;
+    }
+
 }

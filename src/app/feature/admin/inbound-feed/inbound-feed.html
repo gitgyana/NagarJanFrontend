@@ -15,20 +15,23 @@
                 </div>
 
                 <div class="table-data">
-                    @for (data of inboundData; track data.dataId) {
+                    @for (feed of inboundFeeds; track feed.dataId) {
                         <div class="table-record">
-                            <div class="table-record-data">{{ data.source }}</div>
-                            <div class="table-record-data">{{ data.grievanceId }}</div>
-                            <div class="table-record-data">{{ data.timestamp }}</div>
-                            <div class="table-record-data">{{ data.rawContent }}</div>
-                            <div class="table-record-data">{{ data.deduplication }}</div>
+                            <div class="table-record-data">{{ feed.source }}</div>
+                            <div class="table-record-data">{{ feed.grievanceId }}</div>
+                            <div class="table-record-data">{{ feed.timestamp }}</div>
+                            <div class="table-record-data">{{ feed.rawContent }}</div>
+                            <div class="table-record-data">{{ feed.deduplication }}</div>
 
                             <div class="table-record-data grey-badge">
-                                {{ data.category }}
+                                {{ feed.category }}
                             </div>
 
-                            <button class="table-record-data action-button">
-                                Action
+                            <button
+                                class="table-record-data action-button"
+                                (click)="handleFeed(feed.dataId)"
+                            >
+                                VIEW
                             </button>
                         </div>
                     }
@@ -38,5 +41,23 @@
                 </div>
             </div>
         </app-table>
+
+        <div class="ingest-data">
+            @if (ingestData) {
+                @for (data of ingestData; track $index) {
+                    <div class="ingest">
+                        <app-progress-card
+                            [label]="data.label"
+                            [labelValue]="data.labelValue"
+                            [description]="data.description"
+                        />
+                    </div>
+                }
+            } @else {
+                <p class="no-data-info">
+                    CLICK TO VIEW INGEST DATA
+                </p>
+            }
+        </div>
     </div>
 </div>

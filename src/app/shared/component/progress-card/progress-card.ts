@@ -9,7 +9,7 @@ import {Component, Input, OnChanges, OnInit} from '@angular/core';
 export class ProgressCard implements OnInit {
     @Input({ required: true }) label!: string;
     @Input({ required: true }) labelValue!: number;
-    @Input() description!: string;
+    @Input() description?: string;
 
     targetValue: number = 100;
     percentage: number = 0;
