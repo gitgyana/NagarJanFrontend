@@ -18,5 +18,35 @@
         }
     </div>
 
-    <app-table />
+    <app-table>
+        <div class="table">
+            <div class="table-header">
+                <div class="table-header-title">SOURCE</div>
+                <div class="table-header-title">GRIEVANCE ID</div>
+                <div class="table-header-title">AUTO-CATEGORY</div>
+                <div class="table-header-title">CONFIDENCE %</div>
+                <div class="table-header-title">STATUS</div>
+                <div class="table-header-title">ACTION</div>
+            </div>
+
+            <div class="table-data">
+                @for (record of classificationData; track $index) {
+                    <div class="table-record">
+                        <div class="table-record-data">{{ record.source }}</div>
+                        <div class="table-record-data">{{ record.grievanceId }}</div>
+                        <div class="table-record-data">{{ record.category }}</div>
+                        <div class="table-record-data">{{ record.confidence }}</div>
+
+                        <div class="table-record-data primary-badge">
+                            {{ record.status }}
+                        </div>
+
+                        <button class="table-record-data action-button">
+                            {{ record.action }}
+                        </button>
+                    </div>
+                }
+            </div>
+        </div>
+    </app-table>
 </div>

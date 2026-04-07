@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'app-table',
-  imports: [],
-  templateUrl: './table.html',
-  styleUrl: './table.css',
+    selector: 'app-table',
+    imports: [],
+    template: '<ng-content></ng-content>',
+    styleUrl: './table.css',
+    encapsulation: ViewEncapsulation.None
 })
 export class Table {
 
