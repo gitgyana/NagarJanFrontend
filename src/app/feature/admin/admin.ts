@@ -21,11 +21,9 @@ import {SidebarMenuType} from '../../shared/component/sidebar/sidebar.model';
 export class Admin {
     sidebarMenu: SidebarMenuType[] = [
         { label: "Dashboard", path: "dashboard" },
-        { label: "Onboard", path: "onboard" },
-        { label: "Analytics", path: "analytics" },
-        { label: "Audit", path: "audit" },
-        { label: "Recovery", path: "recovery" },
-        { label: "Tickets", path: "tickets" },
+        { label: "Inbound Feed", path: "inbound-feed" },
+        { label: "Classification", path: "classification" },
+        { label: "Work Orders", path: "work-orders" },
         { label: "LogOut", action: "logout" },
     ];
 }
