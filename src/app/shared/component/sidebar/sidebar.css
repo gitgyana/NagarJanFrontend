@@ -12,7 +12,7 @@
     margin: var(--padding-header);
 }
 
-.canncomine {
+.nagarjan {
     object-fit: scale-down;
     height: var(--height-header);
 }
@@ -63,12 +63,6 @@
 }
 
 .footer {
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    align-items: center;
-    justify-content: center;
-    gap: var(--gap);
-
     margin-top: auto;
 }
 
@@ -89,8 +83,4 @@
 
 img {
     width: 90%;
-}
-
-.minepulse {
-    margin: auto;
 }

@@ -1,0 +1,310 @@
+.action-button {
+    width: fit-content;
+    padding: 5px 20px;
+    margin: 5px;
+
+    background-color: var(--mode-default);
+
+    font: var(--font-button-clicked);
+    color: var(--color-pill-value-bg);
+
+    border: 2px solid var(--color-pill-value-bg);
+    border-radius: 25px;
+
+    cursor: var(--cursor-cannco-teal);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.action-button:hover {
+    color: var(--mode-default);
+    background-color: var(--color-pill-value-bg);
+    box-shadow: 0 0 10px var(--color-pill-value-bg);
+}
+
+.action-button-active {
+    color: var(--mode-default);
+    background-color: var(--color-pill-value-bg);
+    box-shadow: none;
+    cursor: var(--cursor-default) !important;
+}
+
+.action-button-active:hover {
+    color: var(--mode-default) !important;
+    background-color: var(--color-pill-value-bg) !important;
+    box-shadow: 0 0 10px var(--color-pill-value-bg);
+}
+
+.action-disabled {
+    width: fit-content;
+    padding: 5px 20px;
+    margin: 5px;
+
+    background-color: var(--color-border);
+
+    font: var(--font-button-clicked);
+    color: var(--color-pill-value-bg);
+
+    border: 2px solid transparent;
+    border-radius: 25px;
+
+    cursor: not-allowed;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.action-disabled:hover {
+    background-color: var(--color-border);
+    color: var(--color-pill-value-bg);
+    box-shadow: 0 0 10px var(--button-danger);
+}
+
+.back-button {
+    width: fit-content;
+    padding: 5px 20px;
+    margin: 5px;
+
+    text-align: center;
+
+    background-color: var(--mode-primary);
+
+    font: var(--font-button-clicked);
+    color: var(--mode-secondary);
+
+    border: 2px solid var(--mode-secondary);
+    border-radius: 25px;
+
+    cursor: var(--cursor-black) !important;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: var(--mode-secondary);
+    color: var(--mode-primary);
+    box-shadow: 0 0 10px var(--mode-secondary);
+}
+
+.back-button-active {
+    color: var(--mode-primary);
+    background-color: var(--mode-secondary);
+    box-shadow: none;
+}
+
+.back-button-active:hover {
+    color: var(--mode-primary) !important;
+    background-color: var(--mode-secondary) !important;
+    box-shadow: 0 0 10px var(--mode-secondary);
+}
+
+.pending-button {
+    width: fit-content;
+    padding: 5px 20px;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--gap);
+    text-align: center;
+
+    background-color: var(--mode-primary);
+
+    font: var(--font-button-clicked);
+    color: orange;
+
+    border: 2px solid orange;
+    border-radius: 25px;
+
+    cursor: var(--cursor-orange);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.pending-button:hover {
+    background-color: orange;
+    color: var(--mode-primary);
+    box-shadow: 0 0 10px orange;
+}
+
+.pending-button-active {
+    color: var(--mode-primary);
+    background-color: orange;
+    box-shadow: none;
+}
+
+.pending-button-active:hover {
+    color: var(--mode-primary) !important;
+    background-color: orange !important;
+    box-shadow: 0 0 10px orange;
+}
+
+.warning-button {
+    width: fit-content;
+    padding: 5px 20px;
+    margin: 5px;
+
+    background-color: var(--mode-default);
+
+    font: var(--font-button-clicked);
+    color: yellow;
+
+    border: 2px solid yellow;
+    border-radius: 25px;
+
+    cursor: var(--cursor-yellow);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.warning-button:hover {
+    color: white;
+    background-color: yellow;
+    box-shadow: 0 0 10px yellow;
+}
+
+.warning-button-active {
+    color: white;
+    background-color: yellow;
+    box-shadow: none;
+}
+
+.warning-button-active:hover {
+    color: white !important;
+    background-color: yellow !important;
+    box-shadow: 0 0 10px yellow;
+}
+
+.delete-button {
+    width: fit-content;
+    padding: 5px 20px;
+    margin: 5px;
+
+    background-color: var(--mode-default);
+
+    font: var(--font-button-clicked);
+    color: var(--button-danger);
+
+    border: 2px solid var(--button-danger);
+    border-radius: 25px;
+
+    cursor: var(--cursor-red);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    color: white;
+    background-color: var(--button-danger);
+    box-shadow: 0 0 10px var(--button-danger);
+}
+
+.delete-button-active {
+    color: white;
+    background-color: var(--button-danger);
+    box-shadow: none;
+}
+
+.delete-button-active:hover {
+    color: white !important;
+    background-color: var(--button-danger) !important;
+    box-shadow: 0 0 10px var(--button-danger);
+}
+
+.button-disabled {
+    border-color: var(--color-border);
+    background-color: var(--color-border) !important;
+    color: var(--mode-secondary) !important;
+    cursor: not-allowed !important;
+}
+
+.search-bar {
+    padding: 5px 20px;
+    margin: 5px;
+
+    font: var(--font-button-clicked);
+    color: var(--color-pill-value-bg);
+
+    border-radius: 25px;
+    border: 2px solid var(--color-pill-value-bg);
+
+    text-align: center;
+
+    cursor: text;
+    background-color: var(--mode-default);
+    caret-color: var(--color-pill-value-bg);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.search-bar:hover {
+    box-shadow: 0 0 10px var(--color-pill-value-bg);
+}
+
+.search-bar:focus {
+    outline: none;
+    color: black;
+    font: var(--font-label);
+    box-shadow: 0 0 10px var(--color-pill-value-bg);
+    caret-color: var(--color-pill-value-bg);
+}
+
+.search-bar::placeholder {
+    color: var(--color-pill-value-bg);
+    transition: color 125ms ease-in-out;
+}
+
+.search-bar:focus::placeholder {
+    color: transparent;
+}
+
+.search-bar::grammar-error,
+.search-bar::spelling-error {
+    text-decoration: none;
+}
+
+.input-box-label {
+    text-transform: uppercase;
+    color: var(--color-caption);
+    font-size: calc(var(--font-size) - 2px);
+}
+
+.input-box {
+    padding: 7px 15px;
+
+    font: var(--font-caption);
+    color: var(--color-caption);
+
+    border-radius: 10px;
+    border: 2px solid var(--color-border);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    cursor: text;
+    background-color: var(--color-near-white);
+    caret-color: var(--color-pill-value-bg);
+}
+
+.input-box:focus {
+    outline: none;
+    color: var(--color-pill-value-bg);
+    border-color: var(--color-caption);
+    transition: all 0.3s ease-in-out;
+}
+
+.input-box::placeholder {
+    color: var(--color-pill-value-bg);
+    transition: all 125ms ease-in-out;
+}
+
+.input-box:focus::placeholder {
+    background-color: var(--color-near-white);
+}
+
+.input-box::grammar-error,
+.input-box::spelling-error {
+    text-decoration: none;
+}

@@ -1,0 +1,10 @@
+.arrow-unicode::before {
+    content: "\219E";
+    font-weight: bolder;
+    font-size: calc(var(--font-size) + 5px);
+}
+
+.download-unicode::before {
+    content: "\2913";
+    font-weight: bolder;
+}

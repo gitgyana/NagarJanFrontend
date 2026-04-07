@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Pacifico&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap'); */
+
+:root {
+    --mode-primary: #ffffff;
+    --mode-secondary: #000000;
+    --mode-default: var(--mode-primary);
+
+    --font-style: 'SN Pro', sans-serif;
+    --font-size: 16px;
+    --font-line-height: 1.25;
+
+    --color-border: #d9d9d9;
+    --color-danger: #ff0000;
+    --color-caption: #4a6b6b;
+    --color-card-bg: var(--mode-default);
+    --color-near-white: #f3f5f6;
+    --color-pill-label-bg: var(--mode-default);
+    --color-pill-label-text: #000000;
+    --color-pill-value-bg: #000666;
+    --color-pill-value-text: var(--mode-default);
+
+    --button-clicked: #b9de43;
+    --button-unclicked: var(--color-border);
+    --button-danger: #ff0000;
+
+    --cursor-general: url('/cursors/cursor-general.svg') 5 5, auto;
+    --cursor-cannco-teal: url('/cursors/cursor-cannco-teal.svg') 5 5, auto;
+    --cursor-cannco-green: url('/cursors/cursor-cannco-green.svg') 5 5, auto;
+    --cursor-black: url('/cursors/cursor-black.svg') 5 5, auto;
+    --cursor-yellow: url('/cursors/cursor-yellow.svg') 5 5, auto;
+    --cursor-orange: url('/cursors/cursor-orange.svg') 5 5, auto;
+    --cursor-red: url('/cursors/cursor-red.svg') 5 5, auto;
+    --cursor-default: url('/cursors/cursor-general.svg') 5 5, auto;
+
+    --font-label: normal                                        /*style*/
+                  400                                           /*weight*/
+                  var(--font-size) / var(--font-line-height)    /*size / line-height*/
+                  var(--font-style);                            /*family*/
+    --font-pill: italic
+                 700
+                 var(--font-size) / var(--font-line-height)
+                 var(--font-style);
+    --font-caption: normal
+                    600
+                    var(--font-size) / var(--font-line-height)
+                    var(--font-style);
+    --font-button-clicked: normal
+                           bold
+                           var(--font-size) / var(--font-line-height)
+                           var(--font-style);
+    --font-button-unclicked: normal
+                             400
+                             var(--font-size) / var(--font-line-height)
+                             var(--font-style);
+
+    --height-pill: 25px;
+    --height-header: 50px;
+
+    --padding-header: 5px;
+    --padding-section-frame: 20px;
+
+    --gap: 10px;
+
+    --box-shadow: 0 0 10px var(--color-border);
+    --box-shadow-hover: 0 0 10px 5px var(--color-border);
+    --box-shadow-green: 0 0 10px var(--button-clicked);
+    --box-shadow-green-hover: 0 0 10px 5px var(--button-clicked);
+
+}

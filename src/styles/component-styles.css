@@ -1,0 +1,111 @@
+.section-frame {
+    padding: var(--padding-section-frame);
+
+    background-color: var(--mode-default);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.section-title {
+    font: var(--font-button-clicked);
+}
+
+.section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pill-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: calc(var(--gap) * 3);
+}
+
+.pill-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pill {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    
+    width: 100%;
+}
+
+.pill-label {
+    background-color: var(--color-pill-label-bg);
+
+    color: var(--color-pill-label-text);
+    font: var(--font-label);
+    
+    height: var(--height-pill);
+
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px 0 0 20px;
+}
+
+.pill-sub-data {
+    background-color: orange;
+    
+    color: var(--color-pill-value-text);
+    font: var(--font-pill);
+    
+    height: var(--height-pill);
+
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pill-value {
+    background-color: var(--color-pill-value-bg);
+
+    color: var(--color-pill-value-text);
+    font: var(--font-pill);
+    
+    height: var(--height-pill);
+
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0 20px 20px 0;
+}
+
+.overlay-frame {
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000000000000;
+}
+
+.overlay-frame > .modal {
+    width: 50%; 
+    padding: 30px; 
+    border-radius: 20px;
+    background-color: var(--mode-primary); 
+}
