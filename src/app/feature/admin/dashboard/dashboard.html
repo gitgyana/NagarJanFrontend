@@ -23,8 +23,8 @@
             <div class="table-header">
                 <div class="table-header-title">SOURCE</div>
                 <div class="table-header-title">GRIEVANCE ID</div>
-                <div class="table-header-title">AUTO-CATEGORY</div>
                 <div class="table-header-title">CONFIDENCE %</div>
+                <div class="table-header-title">AUTO-CATEGORY</div>
                 <div class="table-header-title">STATUS</div>
                 <div class="table-header-title">ACTION</div>
             </div>
@@ -34,10 +34,13 @@
                     <div class="table-record">
                         <div class="table-record-data">{{ record.source }}</div>
                         <div class="table-record-data">{{ record.grievanceId }}</div>
-                        <div class="table-record-data">{{ record.category }}</div>
                         <div class="table-record-data">{{ record.confidence }}</div>
 
                         <div class="table-record-data primary-badge">
+                            {{ record.category }}
+                        </div>
+
+                        <div class="table-record-data secondary-badge">
                             {{ record.status }}
                         </div>
 
