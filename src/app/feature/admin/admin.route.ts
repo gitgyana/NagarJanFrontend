@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import {Admin} from './admin';
 import {Dashboard} from './dashboard/dashboard';
-import {Classification} from './classification/classification';
 import {WorkOrders} from './work-orders/work-orders';
 import {InboundFeed} from './inbound-feed/inbound-feed';
 
@@ -22,12 +21,6 @@ export const ADMIN_ROUTES: Routes = [
                 path: 'inbound-feed',
                 component: InboundFeed,
                 data: { title: 'Inbound Feed' },
-            },
-
-            {
-                path: 'classification',
-                component: Classification,
-                data: { title: 'Classification' },
             },
 
             {

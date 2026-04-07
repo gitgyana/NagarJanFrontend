@@ -22,7 +22,6 @@ export class Admin {
     sidebarMenu: SidebarMenuType[] = [
         { label: "Dashboard", path: "dashboard" },
         { label: "Inbound Feed", path: "inbound-feed" },
-        { label: "Classification", path: "classification" },
         { label: "Work Orders", path: "work-orders" },
         { label: "LogOut", action: "logout" },
     ];
