@@ -1,1 +1,11 @@
-<p>dashboard works!</p>
+<div class="container">
+    <div class="executive-summary">
+        @for (data of labelData; track $index) {
+            <app-label-card
+                [label]="data.label"
+                [value]="data.value"
+                [type]="data.type"
+            />
+                }
+    </div>
+</div>
