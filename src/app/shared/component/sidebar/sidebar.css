@@ -52,13 +52,13 @@
     font: var(--font-button-clicked);
     font-weight: 600;
 
-    border-color: var(--button-clicked);
-    background-color: var(--button-clicked);
+    border-color: #EDF1F6;
+    background-color: #EDF1F6;
 }
 
 .menu-button.active:hover {
-    border-color: var(--button-clicked);
-    background-color: var(--button-clicked);
+    border-color: #EDF1F6;
+    background-color: #EDF1F6;
     box-shadow: 0 10px 10px var(--color-border);
 }
 
