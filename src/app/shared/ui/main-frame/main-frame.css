@@ -1,0 +1,9 @@
+:host {
+    flex: 1;
+    overflow-y: auto;
+    display: block;
+}
+
+.section-frame {
+    display: flow-root;
+}

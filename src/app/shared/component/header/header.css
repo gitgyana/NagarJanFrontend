@@ -1,0 +1,73 @@
+.header {
+    background-color: var(--mode-default);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: var(--height-header);
+    padding: var(--padding-header) 25px;
+
+    border-bottom: 1px solid var(--color-border);
+    z-index: 1000;
+}
+
+.data {
+    display: grid;
+    align-items: center;
+    gap: calc(var(--gap) * 2);
+}
+
+.site {
+    grid-template-columns: auto 1fr;
+}
+
+.user {
+    grid-template-columns: auto 40px;
+    justify-content: end;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 35px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+}
+
+.tab-name {
+    font: var(--font-pill);
+    font-style: normal;
+    color: var(--color-pill-value-bg);
+    font-size: calc(var(--font-size) + 5px);
+}
+
+.tab-dir {
+    font: var(--font-caption);
+    color: var(--color-caption);
+    font-size: calc(var(--font-size) - 5px);
+}
+
+.user .welcome {
+    font: var(--font-caption);
+    font-size: var(--font-caption);
+    color: var(--color-caption);
+}
+
+.user img {
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+}

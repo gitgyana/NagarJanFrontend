@@ -1,0 +1,41 @@
+<div class="sidebar">
+    <div class="header">
+        <img
+            class="nagarjan"
+            src="/logo/logo-nagarjan.svg"
+            alt="NagarJan logo"
+        >
+    </div>
+
+    <div class="section-frame menu">
+        @for(item of menu.slice(0, -1); track item.label) {
+            <button
+                class="menu-button"
+                [id]="item.label.toLowerCase()"
+                (click)="handleClick(item)"
+                [routerLink]="item.path"
+                routerLinkActive="active"
+            >
+                {{ item.label }}
+            </button>
+        }
+    </div>
+
+    <div class="section-frame footer">
+        <img
+            class="minepulse"
+            src="./images/logo-minepulse.png"
+            alt="MinePulse logo"
+        >
+
+        <button
+            class="danger-button menu-button"
+            [id]="menu[menu.length - 1].label.toLowerCase()"
+            (click)="handleClick(menu[menu.length - 1])"
+            [routerLink]="menu[menu.length - 1].path"
+            routerLinkActive="active"
+        >
+            {{ menu[menu.length - 1].label }}
+        </button>
+    </div>
+</div>

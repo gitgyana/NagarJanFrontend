@@ -1,1 +1,16 @@
-<p>admin works!</p>
+<app-screen-ui>
+    <div class="screen">
+        <app-sidebar
+            class="sidebar"
+            [menu]="sidebarMenu"
+        />
+
+        <div class="header-and-content">
+            <app-header />
+
+            <app-main-frame>
+                <router-outlet />
+            </app-main-frame>
+        </div>
+    </div>
+</app-screen-ui>
