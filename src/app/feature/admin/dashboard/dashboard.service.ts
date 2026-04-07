@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {LabelCardInterface} from '../../../shared/component/label-card/label-card.model';
+import {ProgressCardInterface} from '../../../shared/component/progress-card/progress-card.model';
 
 @Injectable({
   providedIn: 'root',
@@ -13,8 +14,19 @@ export class DashboardService {
         { label: 'Pending Work-Orders', value: '247', type: "pending"},
     ];
 
+    private progressData: ProgressCardInterface[] = [
+        { label: 'Water Supply', labelValue: 42, targetValue: 100 },
+        { label: 'Sanitation', labelValue: 28, targetValue: 100 },
+        { label: 'Roads & Transit', labelValue: 15, targetValue: 100 },
+        { label: 'Electricity', labelValue: 15, targetValue: 100 },
+    ]
+
     getExecutiveSummary(): LabelCardInterface[] {
         return this.labels;
+    }
+
+    getCategoricalInbound(): ProgressCardInterface[] {
+        return this.progressData;
     }
 
 }

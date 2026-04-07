@@ -1,11 +1,19 @@
 .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
     gap: calc(var(--gap) * 2);
 }
 
 .executive-summary {
+    grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: calc(var(--gap) * 2);
+}
+
+.category-inbound {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: calc(var(--gap) * 2);
 }

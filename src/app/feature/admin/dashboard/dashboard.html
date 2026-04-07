@@ -6,6 +6,16 @@
                 [value]="data.value"
                 [type]="data.type"
             />
-                }
+        }
+    </div>
+
+    <div class="category-inbound">
+        @for (data of progressData; track $index) {
+            <app-progress-card
+                [label]="data.label"
+                [labelValue]="data.labelValue"
+                [targetValue]="data.targetValue"
+            />
+        }
     </div>
 </div>

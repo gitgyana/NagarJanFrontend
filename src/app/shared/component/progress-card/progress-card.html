@@ -1,0 +1,17 @@
+<div class="progress-card">
+    <div class="progress-card-header">
+        <p class="progress-label">{{ label }}</p>
+    </div>
+
+    <div class="progress-info">
+        <p class="progress-percent">{{ percentage }}%</p>
+    </div>
+
+    <div class="progress-bar">
+        <div
+            class="progress-fill"
+            [style.width.%]="percentage"
+        >
+        </div>
+    </div>
+</div>
