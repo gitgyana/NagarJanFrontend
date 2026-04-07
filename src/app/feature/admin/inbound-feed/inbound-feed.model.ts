@@ -4,7 +4,7 @@ export interface InboundFeedInterface {
     grievanceId: string;
     timestamp: string;
     rawContent: string;
-    deduplication: string;
+    status: string;
     category: string;
     action: string;
 }
