@@ -11,8 +11,6 @@
     border: 2px solid var(--color-pill-value-bg);
     border-radius: 25px;
 
-    cursor: var(--cursor-cannco-teal);
-
     transition: all 0.2s ease-in-out;
 }
 
@@ -26,7 +24,6 @@
     color: var(--mode-default);
     background-color: var(--color-pill-value-bg);
     box-shadow: none;
-    cursor: var(--cursor-default) !important;
 }
 
 .action-button-active:hover {
@@ -74,8 +71,6 @@
     border: 2px solid var(--mode-secondary);
     border-radius: 25px;
 
-    cursor: var(--cursor-black) !important;
-
     transition: all 0.2s ease-in-out;
 }
 
@@ -116,8 +111,6 @@
     border: 2px solid orange;
     border-radius: 25px;
 
-    cursor: var(--cursor-orange);
-
     transition: all 0.2s ease-in-out;
 }
 
@@ -152,7 +145,6 @@
     border: 2px solid yellow;
     border-radius: 25px;
 
-    cursor: var(--cursor-yellow);
 
     transition: all 0.2s ease-in-out;
 }
@@ -187,8 +179,6 @@
 
     border: 2px solid var(--button-danger);
     border-radius: 25px;
-
-    cursor: var(--cursor-red);
 
     transition: all 0.2s ease-in-out;
 }

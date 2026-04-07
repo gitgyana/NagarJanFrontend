@@ -1,7 +1,6 @@
 * {
     font-family: var(--font-style), sans-serif;
     margin: 0;
-    cursor: var(--cursor-default);
 }
 
 hr {
@@ -31,7 +30,6 @@ select {
 }
 
 .pending {
-
     color: orange;
 }
 

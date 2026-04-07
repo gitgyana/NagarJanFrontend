@@ -25,15 +25,6 @@
     --button-unclicked: var(--color-border);
     --button-danger: #ff0000;
 
-    --cursor-general: url('/cursors/cursor-general.svg') 5 5, auto;
-    --cursor-cannco-teal: url('/cursors/cursor-cannco-teal.svg') 5 5, auto;
-    --cursor-cannco-green: url('/cursors/cursor-cannco-green.svg') 5 5, auto;
-    --cursor-black: url('/cursors/cursor-black.svg') 5 5, auto;
-    --cursor-yellow: url('/cursors/cursor-yellow.svg') 5 5, auto;
-    --cursor-orange: url('/cursors/cursor-orange.svg') 5 5, auto;
-    --cursor-red: url('/cursors/cursor-red.svg') 5 5, auto;
-    --cursor-default: url('/cursors/cursor-general.svg') 5 5, auto;
-
     --font-label: normal                                        /*style*/
                   400                                           /*weight*/
                   var(--font-size) / var(--font-line-height)    /*size / line-height*/
