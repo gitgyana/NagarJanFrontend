@@ -38,6 +38,7 @@
     font: var(--font-pill);
     font-size: calc(var(--font-size) + 12px);
     color: var(--color-caption);
+    font-style: normal;
     margin: 0;
 }
 
