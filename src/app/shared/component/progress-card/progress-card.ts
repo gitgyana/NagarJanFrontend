@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 
 @Component({
     selector: 'app-progress-card',
@@ -6,17 +6,14 @@ import { Component, Input, OnChanges } from '@angular/core';
     templateUrl: './progress-card.html',
     styleUrl: './progress-card.css'
 })
-export class ProgressCard implements OnChanges {
+export class ProgressCard implements OnInit {
     @Input({ required: true }) label!: string;
     @Input({ required: true }) labelValue!: number;
-    @Input() target?: string;
-    @Input() targetValue: number = 100;
 
+    targetValue: number = 100;
     percentage: number = 0;
 
-    ngOnChanges() {
-        if (this.targetValue !== 0) {
-            this.percentage = Math.round((this.labelValue / this.targetValue) * 100);
-        }
+    ngOnInit() {
+        this.percentage = Math.round((this.labelValue / this.targetValue) * 100);
     }
 }

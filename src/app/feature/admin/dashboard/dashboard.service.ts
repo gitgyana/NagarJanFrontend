@@ -15,10 +15,10 @@ export class DashboardService {
     ];
 
     private progressData: ProgressCardInterface[] = [
-        { label: 'Water Supply', labelValue: 42, targetValue: 100 },
-        { label: 'Sanitation', labelValue: 28, targetValue: 100 },
-        { label: 'Roads & Transit', labelValue: 15, targetValue: 100 },
-        { label: 'Electricity', labelValue: 15, targetValue: 100 },
+        { label: 'Water Supply', labelValue: 42 },
+        { label: 'Sanitation', labelValue: 28 },
+        { label: 'Roads & Transit', labelValue: 15 },
+        { label: 'Electricity', labelValue: 15 },
     ]
 
     getExecutiveSummary(): LabelCardInterface[] {
