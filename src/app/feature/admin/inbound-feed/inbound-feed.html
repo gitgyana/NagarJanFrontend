@@ -1,1 +1,42 @@
-<p>inbound-feed works!</p>
+<div class="container">
+    <p class="title">Real-time grievance ingestion and AI deduplication engine</p>
+
+    <div class="split-container">
+        <app-table>
+            <div class="table">
+                <div class="table-header">
+                    <div class="table-header-title">SOURCE</div>
+                    <div class="table-header-title">GRIEVANCE ID</div>
+                    <div class="table-header-title">TIMESTAMP</div>
+                    <div class="table-header-title">RAW CONTENT</div>
+                    <div class="table-header-title">DEDUPLICATION</div>
+                    <div class="table-header-title">CATEGORY</div>
+                    <div class="table-header-title">ACTION</div>
+                </div>
+
+                <div class="table-data">
+                    @for (data of inboundData; track data.dataId) {
+                        <div class="table-record">
+                            <div class="table-record-data">{{ data.source }}</div>
+                            <div class="table-record-data">{{ data.grievanceId }}</div>
+                            <div class="table-record-data">{{ data.timestamp }}</div>
+                            <div class="table-record-data">{{ data.rawContent }}</div>
+                            <div class="table-record-data">{{ data.deduplication }}</div>
+
+                            <div class="table-record-data grey-badge">
+                                {{ data.category }}
+                            </div>
+
+                            <button class="table-record-data action-button">
+                                Action
+                            </button>
+                        </div>
+                    }
+                    <div class="table-recond">
+                        <div class="table-record-data"></div>
+                    </div>
+                </div>
+            </div>
+        </app-table>
+    </div>
+</div>

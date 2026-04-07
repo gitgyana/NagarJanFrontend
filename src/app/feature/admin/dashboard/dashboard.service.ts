@@ -23,10 +23,10 @@ export class DashboardService {
     ];
 
     private classificationData: ClassificationDataInterface[] = [
-        { source: 'Mobile App', grievanceId: '#GRV-98210', category: 'Water Supply', confidence: 98, status: 'Auto-Verified', action: 'Verify' },
-        { source: 'IVR Service', grievanceId: '#GRV-98211', category: 'Roads & Transit', confidence: 62, status: 'Pending Review', action: 'Re-classify' },
-        { source: 'Web Portal', grievanceId: '#GRV-98212', category: 'Sanitation', confidence: 94, status: 'Auto-Verified', action: 'Verify' },
-        { source: 'Support Email', grievanceId: '#GRV-98213', category: 'Electricity', confidence: 99, status: 'Auto-Verified', action: 'Verify' },
+        { dataId: '1', source: 'Mobile App', grievanceId: '#GRV-98210', category: 'Water Supply', confidence: 98, status: 'Auto-Verified', action: 'Verify' },
+        { dataId: '2', source: 'IVR Service', grievanceId: '#GRV-98211', category: 'Roads & Transit', confidence: 62, status: 'Pending Review', action: 'Re-classify' },
+        { dataId: '3', source: 'Web Portal', grievanceId: '#GRV-98212', category: 'Sanitation', confidence: 94, status: 'Auto-Verified', action: 'Verify' },
+        { dataId: '4', source: 'Support Email', grievanceId: '#GRV-98213', category: 'Electricity', confidence: 99, status: 'Auto-Verified', action: 'Verify' },
     ];
 
     getExecutiveSummary(): LabelCardInterface[] {

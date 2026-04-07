@@ -30,7 +30,7 @@
             </div>
 
             <div class="table-data">
-                @for (record of classificationData; track $index) {
+                @for (record of classificationData; track record.dataId) {
                     <div class="table-record">
                         <div class="table-record-data">{{ record.source }}</div>
                         <div class="table-record-data">{{ record.grievanceId }}</div>

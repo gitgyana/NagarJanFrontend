@@ -1,0 +1,35 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--gap) * 2);
+}
+.title {
+    font: var(--font-caption);
+    font-size: calc(var(--font-size) * 1.5);
+    text-transform: uppercase;
+}
+
+.split-container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+.table-data {
+    max-height: calc(100vh - (
+        (
+            var(--height-header)
+        ) + (
+            var(--padding-header) * 2
+        ) + (
+            var(--padding-section-frame) * 2
+        ) + (
+            var(--font-size) * 1.5
+        ) + (
+            var(--gap) * 6
+        ) + (
+            60px
+        )
+    ));
+
+    overflow-y: auto;
+}

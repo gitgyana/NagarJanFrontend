@@ -1,4 +1,5 @@
 export interface ClassificationDataInterface {
+    dataId: string;
     source: string;
     grievanceId: string;
     category: string;
