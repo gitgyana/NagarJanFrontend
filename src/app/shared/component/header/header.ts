@@ -11,8 +11,6 @@ import {SetupInterface} from '../../../code/models/setup.model';
     styleUrl: './header.css',
 })
 export class Header implements OnInit, OnDestroy {
-    @Input() organisationLogo?: string;
-
     breadcrumb: string = '';
     currentTab: string = '';
 
@@ -81,9 +79,5 @@ export class Header implements OnInit, OnDestroy {
 
     get userName(): string {
         return this.userData.data.firstName || 'User';
-    }
-
-    get profileImage(): string {
-        return this.userData.data.profileImage || 'https://placehold.co/50x50';
     }
 }

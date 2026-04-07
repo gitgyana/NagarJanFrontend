@@ -1,14 +1,5 @@
 <div class="header">
     <div class="site data">
-        @if(organisationLogo) {
-            <div class="logo">
-                <img
-                    src="/logo/logo-nagarjan.svg"
-                    alt="Organisation Logo"
-                />
-            </div>
-        }
-
         <div class="info">
             <p class="tab-name">{{ currentTab }}</p>
             <p class="tab-dir">{{ breadcrumb }}</p>
@@ -18,11 +9,5 @@
 
     <div class="user data">
         <p class="welcome">Welcome {{ userName }}</p>
-
-        <img
-            [src]="profileImage"
-            alt="Profile Image"
-            loading="lazy"
-        />
     </div>
 </div>

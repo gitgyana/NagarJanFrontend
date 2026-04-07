@@ -24,8 +24,6 @@
 }
 
 .user {
-    grid-template-columns: auto 40px;
-    justify-content: end;
     align-items: center;
 }
 
