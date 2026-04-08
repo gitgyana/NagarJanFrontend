@@ -85,3 +85,35 @@
 .form button:hover {
     background: #1d4ed8;
 }
+
+.phone-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.record-btn {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #dc2626;
+    color: white;
+    cursor: pointer;
+}
+
+.record-btn:hover {
+    background: #b91c1c;
+}
+
+.transcript {
+    background: #f9fafb;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.tag {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #2563eb;
+}

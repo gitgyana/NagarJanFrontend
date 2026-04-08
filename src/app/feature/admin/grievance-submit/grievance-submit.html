@@ -3,29 +3,46 @@
     <h2>Submit Grievance</h2>
 
     <div class="source-buttons">
-        <button
-            [class.active]="selectedSource === 'TEXT'"
-            (click)="selectSource('TEXT')">
-            TEXT
-        </button>
-
-        <button
-            [class.active]="selectedSource === 'EMAIL'"
-            (click)="selectSource('EMAIL')">
-            EMAIL
-        </button>
-
-        <button
-            [class.active]="selectedSource === 'PHONE'"
-            (click)="selectSource('PHONE')">
-            PHONE
-        </button>
+        <button [class.active]="selectedSource === 'TEXT'" (click)="selectSource('TEXT')">TEXT</button>
+        <button [class.active]="selectedSource === 'EMAIL'" (click)="selectSource('EMAIL')">EMAIL</button>
+        <button [class.active]="selectedSource === 'PHONE'" (click)="selectSource('PHONE')">PHONE</button>
     </div>
 
     <div class="form">
-        <input type="text" placeholder="Title" [(ngModel)]="formData.title"/>
-        <textarea placeholder="Describe issue" [(ngModel)]="formData.content"></textarea>
+
+        @if (selectedSource === 'TEXT') {
+            <input type="text" placeholder="Title" [(ngModel)]="formData.title"/>
+            <textarea placeholder="Describe issue" [(ngModel)]="formData.content"></textarea>
+        }
+
+        @if (selectedSource === 'EMAIL') {
+            <input type="email" placeholder="From Email" [(ngModel)]="formData.email"/>
+            <input type="text" placeholder="Subject" [(ngModel)]="formData.title"/>
+            <textarea placeholder="Email Body" [(ngModel)]="formData.content"></textarea>
+        }
+
+        @if (selectedSource === 'PHONE') {
+
+            <div class="phone-box">
+
+                <button class="record-btn" (click)="startRecording()">
+                    {{ isRecording ? 'Recording...' : 'Start Recording' }}
+                </button>
+
+                @if (transcript) {
+                    <div class="transcript">
+                        <strong>Transcript:</strong>
+                        <p>{{ transcript }}</p>
+
+                        <p class="tag">
+                            Detected: {{ detectType(transcript) }}
+                        </p>
+                    </div>
+                }
+
+            </div>
+        }
+
         <button (click)="submit()">Submit</button>
     </div>
-
 </div>
