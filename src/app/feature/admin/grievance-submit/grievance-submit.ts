@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 })
 export class GrievanceSubmit {
 
-    selectedSource: 'TEXT' | 'EMAIL' | 'PHONE' = 'TEXT';
+    selectedSource = 'TEXT';
 
     formData = {
         content: '',
@@ -23,12 +23,9 @@ export class GrievanceSubmit {
     isRecording = false;
     transcript = '';
 
-    constructor(
-        private router: Router,
-        private http: HttpClient,
-    ) {}
+    constructor(private router: Router, private http: HttpClient) {}
 
-    selectSource(source: 'TEXT' | 'EMAIL' | 'PHONE') {
+    selectSource(source: string) {
         this.selectedSource = source;
 
         this.formData = {
@@ -58,7 +55,6 @@ export class GrievanceSubmit {
         recognition.interimResults = false;
 
         this.isRecording = true;
-
         recognition.start();
 
         recognition.onresult = (event: any) => {
@@ -84,7 +80,6 @@ export class GrievanceSubmit {
     }
 
     submit() {
-
         let content = this.formData.content;
 
         if (this.selectedSource === 'PHONE') {
@@ -95,13 +90,11 @@ export class GrievanceSubmit {
 
         const payload = {
             source: this.selectedSource,
-            content: content,
+            content,
             title: this.formData.title || detectedType,
             locationId: this.formData.locationId,
             detectedType
         };
-
-        console.log("Payload:", payload);
 
         this.http.post('/api/grievance', payload, {
             responseType: 'text'
