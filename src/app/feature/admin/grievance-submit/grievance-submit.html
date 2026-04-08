@@ -1,0 +1,31 @@
+<div class="container">
+
+    <h2>Submit Grievance</h2>
+
+    <div class="source-buttons">
+        <button
+            [class.active]="selectedSource === 'TEXT'"
+            (click)="selectSource('TEXT')">
+            TEXT
+        </button>
+
+        <button
+            [class.active]="selectedSource === 'EMAIL'"
+            (click)="selectSource('EMAIL')">
+            EMAIL
+        </button>
+
+        <button
+            [class.active]="selectedSource === 'PHONE'"
+            (click)="selectSource('PHONE')">
+            PHONE
+        </button>
+    </div>
+
+    <div class="form">
+        <input type="text" placeholder="Title" [(ngModel)]="formData.title"/>
+        <textarea placeholder="Describe issue" [(ngModel)]="formData.content"></textarea>
+        <button (click)="submit()">Submit</button>
+    </div>
+
+</div>

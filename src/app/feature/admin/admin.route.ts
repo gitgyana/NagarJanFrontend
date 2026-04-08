@@ -4,6 +4,7 @@ import {Dashboard} from './dashboard/dashboard';
 import {WorkOrders} from './work-orders/work-orders';
 import {InboundFeed} from './inbound-feed/inbound-feed';
 import {DashboardResolver} from './dashboard/dashboard.resolver';
+import {GrievanceSubmit} from './grievance-submit/grievance-submit';
 
 export const ADMIN_ROUTES: Routes = [
     {
@@ -31,6 +32,12 @@ export const ADMIN_ROUTES: Routes = [
                 path: 'work-orders',
                 component: WorkOrders,
                 data: { title: 'Work Orders' },
+            },
+
+            {
+                path: 'grievance-submit',
+                component: GrievanceSubmit,
+                data: { title: 'Grievance Submit' },
             },
 
             {

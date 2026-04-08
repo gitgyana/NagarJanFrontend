@@ -23,6 +23,6 @@ export class Admin {
         { label: "Dashboard", path: "dashboard" },
         { label: "Inbound Feed", path: "inbound-feed" },
         { label: "Work Orders", path: "work-orders" },
-        { label: "LogOut", action: "logout" },
+        { label: "Grievance", path: "grievance-submit" },
     ];
 }

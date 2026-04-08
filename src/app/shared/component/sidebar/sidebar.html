@@ -8,7 +8,7 @@
     </div>
 
     <div class="section-frame menu">
-        @for(item of menu.slice(0, -1); track item.label) {
+        @for(item of menu; track item.label) {
             <button
                 class="menu-button"
                 [id]="item.label.toLowerCase()"
@@ -19,17 +19,5 @@
                 {{ item.label }}
             </button>
         }
-    </div>
-
-    <div class="section-frame footer">
-        <button
-            class="danger-button menu-button"
-            [id]="menu[menu.length - 1].label.toLowerCase()"
-            (click)="handleClick(menu[menu.length - 1])"
-            [routerLink]="menu[menu.length - 1].path"
-            routerLinkActive="active"
-        >
-            {{ menu[menu.length - 1].label }}
-        </button>
     </div>
 </div>

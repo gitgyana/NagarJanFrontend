@@ -24,7 +24,6 @@ export class Dashboard implements OnInit {
 
     ngOnInit() {
         const res: DashboardDataInterface = this.route.snapshot.data['dashboardData'];
-        console.log(JSON.stringify(res));
 
         this.labelData = res.labels;
         this.progressData = res.categoryData;
