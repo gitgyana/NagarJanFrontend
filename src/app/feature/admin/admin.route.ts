@@ -3,6 +3,7 @@ import {Admin} from './admin';
 import {Dashboard} from './dashboard/dashboard';
 import {WorkOrders} from './work-orders/work-orders';
 import {InboundFeed} from './inbound-feed/inbound-feed';
+import {DashboardResolver} from './dashboard/dashboard.resolver';
 
 export const ADMIN_ROUTES: Routes = [
     {
@@ -14,6 +15,9 @@ export const ADMIN_ROUTES: Routes = [
             {
                 path: 'dashboard',
                 component: Dashboard,
+                resolve: {
+                    dashboardData: DashboardResolver,
+                },
                 data: { title: 'Dashboard' },
             },
 

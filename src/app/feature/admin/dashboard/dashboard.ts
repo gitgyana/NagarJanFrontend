@@ -5,7 +5,8 @@ import {DashboardService} from './dashboard.service';
 import {ProgressCardInterface} from '../../../shared/component/progress-card/progress-card.model';
 import {ProgressCard} from '../../../shared/component/progress-card/progress-card';
 import {Table} from '../../../shared/component/table/table';
-import {ClassificationDataInterface} from './dashboard.model';
+import {ClassificationDataInterface, DashboardDataInterface} from './dashboard.model';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     selector: 'app-dashboard',
@@ -19,13 +20,15 @@ export class Dashboard implements OnInit {
     progressData!: ProgressCardInterface[];
     classificationData!: ClassificationDataInterface[];
 
-    constructor(private dashboardService: DashboardService) {
-    }
+    constructor(private route: ActivatedRoute) {}
 
     ngOnInit() {
-        this.labelData = this.dashboardService.getExecutiveSummary();
-        this.progressData = this.dashboardService.getCategoricalInbound();
-        this.classificationData = this.dashboardService.getClassificationData();
+        const res: DashboardDataInterface = this.route.snapshot.data['dashboardData'];
+        console.log(JSON.stringify(res));
+
+        this.labelData = res.labels;
+        this.progressData = res.categoryData;
+        this.classificationData = res.classificationTable;
     }
 
 }
