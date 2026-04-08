@@ -35,10 +35,11 @@ export class GrievanceSubmit {
             locationId: this.formData.locationId
         };
 
-        this.http.post('/api/grievance', payload)
-            .subscribe({
-                next: () => alert('Submitted successfully'),
-                error: (err) => console.error(err)
-            });
+        this.http.post('http://localhost:8080/api/grievance', payload, {
+            responseType: 'text'
+        }).subscribe({
+            next: () => alert('Submitted successfully'),
+            error: (err) => console.error(err)
+        });
     }
 }
