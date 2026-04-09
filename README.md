@@ -1,59 +1,77 @@
-# NagarJanFrontend
+# Project README
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
+## Team Details
 
-## Development server
+* **Team Number:** 21
+* **Team Name:** SYNTX
+* **Team Members:**
 
-To start a local development server, run:
+  * Gyana Priyadarshi
+  * Sarojini Maharana
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Selected Problem Statement
 
-## Code scaffolding
+**PS-01: Public Grievance Prioritisation Engine for Municipal Bodies**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Municipal corporations receive hundreds of grievances daily across multiple channels such as mobile apps, emails, phone calls, and social media. Currently, most grievances are handled on a *first-come-first-served* basis, which fails to account for urgency, severity, or impact.
 
-```bash
-ng generate component component-name
-```
+This project aims to build an intelligent system that:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* Ingests grievances from multiple sources
+* Automatically classifies them by type and severity
+* Generates a **daily prioritized work-order list** for field teams
 
-```bash
-ng generate --help
-```
+The prioritization considers:
 
-## Building
+* Issue age
+* Recurrence frequency
+* Affected population density
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## Key Features
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Multi-Source Data Ingestion
 
-## Running unit tests
+* Collects complaints from apps, emails, calls, and social media
+* Normalizes and aggregates data into a unified format
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Deduplication Engine
 
-```bash
-ng test
-```
+* Identifies and merges duplicate complaints
+* Prevents redundancy and reduces workload
 
-## Running end-to-end tests
+### Severity Classification Model
 
-For end-to-end (e2e) testing, run:
+* Uses machine learning/NLP to classify grievances
+* Assigns severity levels (e.g., Low, Medium, High, Critical)
 
-```bash
-ng e2e
-```
+### Smart Prioritization Algorithm
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+* Ranks complaints based on:
 
-## Additional Resources
+  * Urgency (time since reported)
+  * Frequency (recurring issues)
+  * Impact (population density affected)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Daily Work-Order Generation
+
+* Produces an actionable, ranked task list
+* Helps field teams focus on high-impact issues first
+
+### Scalable & Adaptable
+
+* Designed to handle large volumes of complaints
+* Can be extended with additional data sources or rules
+
+---
+
+## Technical Challenge
+
+* Handling **multi-source ingestion** with accurate deduplication
+* Building a reliable **severity classification model**
+* Designing a **multi-factor prioritization algorithm** that balances competing signals into a clear, actionable ranking
+
+---
